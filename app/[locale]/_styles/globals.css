@@ -1,0 +1,152 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+body {
+  font-family: 'Inconsolata' , sans-serif ;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  scrollbar-width: none;
+  /* Firefox */
+}
+
+.touch-auto {
+  touch-action: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.line-anima {
+  animation: lineAnim 8s linear infinite;
+  -webkit-animation: lineAnim 8s linear infinite;
+}
+
+@keyframes lineAnim {
+  0% {
+    left: -40%;
+    width: 0%;
+  }
+
+  50% {
+    left: -20%;
+    width: 80%;
+  }
+
+  100% {
+    left: 0;
+    width: 100%;
+  }
+}
+
+.lh {
+  line-height: normal;
+}
+
+.bsh {
+  box-shadow: 0px 0px 30px 2px rgba(0, 0, 0, 0.10);
+}
+
+.ReviewsSlider {
+  box-shadow: 0px 0px 14px 0px rgba(0, 0, 0, 0.10);
+}
+
+.no-spinner::-webkit-outer-spin-button,
+.no-spinner::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.no-spinner {
+  -moz-appearance: textfield;
+}
+
+
+
+.custom-scrollbar {
+  overflow-y: scroll;
+  scrollbar-width: none; /* Для Firefox */
+  -ms-overflow-style: none;  /* Для Internet Explorer и Edge */
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+  display: none; /* Для Chrome, Safari и Opera */
+}
+
+
+/* Убираем стандартную полосу прокрутки */
+.no-scrollbar::-webkit-scrollbar {
+  display: none; /* Для Chrome, Safari и других WebKit-браузеров */
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none;  /* Для Internet Explorer и Edge */
+  scrollbar-width: none;     /* Для Firefox */
+}
+
+
+.slider-with-gap .slide-item {
+  padding: 0 15px; /* Добавляем 15px отступ с каждой стороны для увеличения гэпа */
+}
+
+.slider-with-gap .slick-list {
+  margin: 0 -15px; /* Это нужно, чтобы компенсировать отступы и элементы не выходили за пределы контейнера */
+}
+
+
+.form-item {
+  width: 100%;
+  margin-bottom: 16px;
+}
+
+.input, .textarea, .ant-select-selector {
+  border-radius: 8px !important;
+  font-size: 16px !important;
+  padding: 12px !important;
+}
+
+
+.phone-input .form-control {
+  border-radius: 8px !important;
+  font-size: 16px !important;
+}
+
+.phone-input .flag-dropdown {
+  border: none;
+  background-color: transparent;
+}
+
+.phone-input .flag {
+  margin-right: 10px;
+}
+
+.phone-input .special-label {
+  display: none; /* Hide unnecessary label */
+}
+
+button:disabled {
+  background-color: #f5f5f5 !important;
+  cursor: not-allowed;
+}
+
+.custom-select-dropdown .ant-select-item {
+  padding: 10px; /* Отступы внутри элементов списка */
+}
+
+.custom-select-dropdown .ant-select-item-option-selected {
+  background-color: #FB6A68 !important; /* Красный фон для выбранного элемента */
+  color: white !important; /* Белый текст для выбранного элемента */
+}
+
+
+
+.ant-image-mask-info {
+	display: none !important;
+}

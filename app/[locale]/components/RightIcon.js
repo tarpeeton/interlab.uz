@@ -1,0 +1,12 @@
+import Image from "next/image"
+import backet from "@/public/svg/arrow-right-blck.svg"
+
+function Logo() {
+  return (
+    <div className="items-center gap-4 z-10 flex">
+      <Image priority src={backet} width={15} height={15} alt="Interlab innovation" quality={100} />
+    </div>
+  )
+}
+
+export default Logo

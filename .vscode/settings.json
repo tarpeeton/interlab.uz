@@ -1,0 +1,130 @@
+{
+  // Editor settings
+  "editor.fontFamily": "Iosevka, 'Iosevka Term', monospace",
+  "editor.fontSize": 14,
+  "editor.fontWeight": "400",
+  "editor.lineHeight": 1.5,
+  "editor.letterSpacing": 0.5,
+  "editor.tabSize": 2,
+  "editor.insertSpaces": true,
+  "editor.detectIndentation": true,
+  "editor.minimap.enabled": false,
+  "editor.smoothScrolling": true,
+  "editor.wordWrap": "on",
+  "editor.cursorBlinking": "smooth",
+  "editor.multiCursorModifier": "ctrlCmd",
+  "editor.cursorStyle": "line",
+  "editor.formatOnSave": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+
+  // WebStorm-like features
+  "editor.suggestSelection": "recentlyUsed",
+  "editor.inlineSuggest.enabled": true,
+  "editor.quickSuggestions": {
+    "strings": true,
+    "comments": true,
+    "other": true
+  },
+  "editor.acceptSuggestionOnCommitCharacter": true,
+  "editor.suggestOnTriggerCharacters": true,
+  "editor.parameterHints.enabled": true,
+  "editor.snippetSuggestions": "top",
+  "editor.suggest.showKeywords": true,
+  "editor.suggest.showMethods": true,
+  "editor.suggest.showFunctions": true,
+  "editor.suggest.showVariables": true,
+  "editor.suggest.showClasses": true,
+  "editor.suggest.showProperties": true,
+  "editor.suggest.showConstants": true,
+  "editor.suggest.showConstructors": true,
+  "editor.suggest.showModules": true,
+  "editor.suggest.showEvents": true,
+  "editor.suggest.showOperators": true,
+  "editor.suggest.showUnits": true,
+  "editor.suggest.showValues": true,
+  "editor.suggest.showWords": true,
+  "editor.suggest.showFiles": true,
+  "editor.suggest.showReferences": true,
+  "editor.suggest.showCustomcolors": true,
+  "editor.suggest.showColors": true,
+  "editor.suggest.showFolders": true,
+  "editor.suggest.showTypeParameters": true,
+  "editor.suggest.showSnippets": true,
+  "editor.suggest.showUsers": true,
+  "editor.suggest.showIssues": true,
+
+  // JavaScript/TypeScript specific
+  "javascript.suggest.autoImports": true,
+  "javascript.suggest.enabled": true,
+  "javascript.suggest.names": true,
+  "javascript.suggest.paths": true,
+  "javascript.suggest.completeFunctionCalls": true,
+  "javascript.preferences.importModuleSpecifier": "non-relative",
+  "javascript.preferences.quoteStyle": "single",
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "javascript.inlayHints.functionLikeReturnTypes": true,
+  "javascript.inlayHints.parameterNames": true,
+  "javascript.inlayHints.parameterTypes": true,
+  "javascript.inlayHints.propertyDeclarationTypes": true,
+  "javascript.inlayHints.variableTypes": true,
+
+  "typescript.suggest.autoImports": true,
+  "typescript.suggest.enabled": true,
+  "typescript.suggest.paths": true,
+  "typescript.suggest.completeFunctionCalls": true,
+  "typescript.preferences.importModuleSpecifier": "non-relative",
+  "typescript.preferences.quoteStyle": "single",
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "typescript.inlayHints.functionLikeReturnTypes": true,
+  "typescript.inlayHints.parameterNames": true,
+  "typescript.inlayHints.parameterTypes": true,
+  "typescript.inlayHints.propertyDeclarationTypes": true,
+  "typescript.inlayHints.variableTypes": true,
+
+  // Path Intellisense
+  "path-intellisense.autoSlashAfterDirectory": true,
+  "path-intellisense.extensionOnImport": true,
+  "path-intellisense.showHiddenFiles": true,
+
+  // Auto Import
+  "autoimport.autoComplete": true,
+  "autoimport.showNotifications": true,
+  "autoimport.doubleQuotes": false,
+  "autoimport.filesToScan": "**/*.{ts,tsx,js,jsx}",
+
+  // Workbench
+  "workbench.iconTheme": "vscode-icons",
+  "workbench.startupEditor": "none",
+  "workbench.editor.tabSizing": "shrink",
+  "workbench.colorTheme": "GitHub Dark Default",
+
+  // Files & Explorer
+  "explorer.confirmDelete": false,
+  "explorer.confirmDragAndDrop": false,
+  "explorer.compactFolders": false,
+  "files.exclude": {
+    "**/.git": true,
+    "**/.next": true,
+    "**/node_modules": true,
+    "**/dist": true,
+    "**/.expo": true,
+    "**/.idea": true
+  },
+  "files.autoSave": "afterDelay",
+  "files.autoSaveDelay": 1000,
+
+  // Formatters
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "explorer.confirmPasteNative": false
+}
