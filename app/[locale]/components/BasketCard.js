@@ -11,12 +11,16 @@ import Link from "next/link";
 import { useParams } from "next/navigation";
 import SuccessModal from "@/app/[locale]/components/SuccessModal";
 import axios from "axios";
+import PhoneInput from "react-phone-input-2";
+import "react-phone-input-2/lib/style.css";
 
 const BasketCard = () => {
   const t = useTranslations("basket");
   const { locale } = useParams();
   const [orderStatus, setOrderStatus] = useState(false);
   const [openModal, setOpenModal] = useState(false);
+  const [phone, setPhone] = useState("");
+  const [error, setError] = useState("");
   const dispatch = useDispatch();
   const basketCards = useSelector((state) => state.cart.items);
   const totalSumma = basketCards.reduce(
@@ -54,7 +58,7 @@ const BasketCard = () => {
         "https://api.interlab-basket-bot.result-me.uz/api/basket-card",
         {
           fullName: e.target.name.value,
-          phone: e.target.number.value,
+          phone: phone,
           paymentType: orderStatus,
           basketCards: basketCards,
         },
@@ -65,16 +69,11 @@ const BasketCard = () => {
           },
         }
       );
-      console.log(
-        e.target.name.value,
-        e.target.number.value,
-        orderStatus,
-        response
-      );
       if (response.status === 200) {
         handleOpenModal(); // Agar so‘rov muvaffaqiyatli bo‘lsa, modal ochiladi
       }
     } catch (error) {
+      console.log(e.target.name.value, phone, orderStatus, response);
       console.log(error, "Xatolik mavjud");
     }
   };
@@ -147,12 +146,14 @@ const BasketCard = () => {
                 placeholder={t("order_input_name")}
                 required
               />
-              <input
-                className="w-full p-4 border rounded-[12px]"
-                type="text"
-                name="number"
-                required
-                placeholder={t("order_input_number")}
+              <PhoneInput
+                country={"uz"}
+                enableSearch={true}
+                onChange={(phone) => setPhone(phone)}
+                containerClass="w-full"
+                inputClass="!w-full !p-6 !pl-[45px] border-2 border-blue-500 !rounded-[12px] outline-none"
+                buttonClass="bg-blue-500 text-black !rounded-s-[12px]"
+                dropdownClass="bg-white shadow-lg border border-gray-200"
               />
               <select
                 required
