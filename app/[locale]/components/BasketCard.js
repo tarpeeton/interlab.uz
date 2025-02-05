@@ -70,10 +70,11 @@ const BasketCard = () => {
         }
       );
       if (response.status === 200) {
-        handleOpenModal(); // Agar so‘rov muvaffaqiyatli bo‘lsa, modal ochiladi
+        handleOpenModal(); // Modalni ochish
+        e.reset(); // Formani tozalash
+        setPhone("");
       }
     } catch (error) {
-      console.log(e.target.name.value, phone, orderStatus, response);
       console.log(error, "Xatolik mavjud");
     }
   };

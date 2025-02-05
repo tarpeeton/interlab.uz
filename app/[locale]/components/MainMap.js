@@ -322,9 +322,9 @@ export default function Map() {
               ? clinicsLocations.map((clinic) => (
                   <AddressItem
                     key={clinic.id}
-                    title={clinic.name}
-                    address={clinic.address}
-                    graphic={[clinic.graphic]}
+                    title={clinic.name[locale]}
+                    address={clinic.address[locale]}
+                    graphic={[clinic.graphic[locale]]}
                     onClick={() =>
                       handleLocationClick(clinic.id, clinic.coords)
                     }
