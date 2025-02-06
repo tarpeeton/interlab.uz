@@ -20,15 +20,17 @@ export default function ServiceCard({
         <div className="flex gap-2 max-md:flex-col">
           <div className="flex flex-col w-[100%] max-md:ml-0 max-md:w-[80%]">
             <div className="flex flex-col mt-4 max-md:max-w-full">
-              <h3 className={`max-mdx:text-xl text-2xl font-bold leading-8 uppercase text-neutral-900 max-md:max-w-full`}>
+              <h3
+                className={`max-mdx:text-xl text-2xl font-bold leading-8 uppercase text-neutral-900 max-md:max-w-full`}
+              >
                 {title}
               </h3>
-              <p className="mt-2 leading-4 text-sm text-zinc-500 max-md:max-w-full">
+              <p className="mt-2 leading-4 text-sm text-zinc-500 max-md:max-w-[80%] z-10">
                 {description}
               </p>
             </div>
           </div>
-          <div className="absolute -bottom-4 right-0 w-1/2  md:w-[40%] max-md:ml-0">
+          <div className="absolute -bottom-4 right-0 w-1/2  md:w-[38%] max-md:ml-0">
             <Image
               quality={100}
               src={imageSrc}

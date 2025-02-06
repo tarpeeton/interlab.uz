@@ -273,7 +273,7 @@ function Main({ params }) {
             </div>
           </div>
           <div className="max-w-[1440px] px-2 mx-auto w-full">
-            <a href="/services" className="">
+            <a href={`${locale}/services`} className="">
               <h2 className="lg:mt-52 mt-24 text-3xl mdx:text-4xl font-bold text-neutral-900 max-md:max-w-full">
                 {t("Main.Services.title")}
               </h2>

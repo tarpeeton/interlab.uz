@@ -24,7 +24,6 @@ export default function InterestClient({ relatedServices, locale }) {
           <a href={`/${locale}/services`}>
             <button className="flex gap-2 justify-center self-center px-10 py-3.5 mt-9 text-base font-bold text-center text-red-400 border border-red-400 border-solid rounded-[100px] max-md:px-5">
               <span className="my-auto">{t('Main.Services.all')}</span>
-             
             </button>
           </a>
         </div>
