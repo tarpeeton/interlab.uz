@@ -2,8 +2,15 @@ import callIcon from "@/public/svg/call-icon-red.svg";
 import Image from "next/image";
 import arrowRight from "@/public/svg/arrow-right-gray.svg";
 
-export default function AddressItem({ title, address, graphic, tel, url , onClick , locale }) {
-
+export default function AddressItem({
+  title,
+  address,
+  graphic,
+  tel,
+  url,
+  onClick,
+  locale,
+}) {
   return (
     <div className="p-4 border rounded-2xl shadow-lg flex flex-col gap-8 max-xl:gap-0 justify-between flex-shrink-0 flex-grow-0 w-full mx-auto">
       <div className="flex flex-col gap-2 max-xl:gap-1">
@@ -11,6 +18,7 @@ export default function AddressItem({ title, address, graphic, tel, url , onClic
           {title}
         </h3>
         <p className="font-medium max-xl:hidden">{address}</p>
+
         <div className="flex flex-col">
           {graphic.map((item, index) => {
             return (
@@ -36,8 +44,11 @@ export default function AddressItem({ title, address, graphic, tel, url , onClic
               {tel}
             </a>
           </div>
-          <button onClick={onClick} className="flex gap-3 items-center text-neutral-400">
-          {locale === 'ru' ? 'Подробнее' : 'Batafsil'}
+          <button
+            onClick={onClick}
+            className="flex gap-3 items-center text-neutral-400"
+          >
+            {locale === "ru" ? "Подробнее" : "Batafsil"}
             <Image
               src={arrowRight}
               width={100}

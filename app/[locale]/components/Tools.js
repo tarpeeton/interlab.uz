@@ -14,6 +14,7 @@ import resultsHover from "@/public/svg/results/results-hover.svg";
 import { useTranslations } from "next-intl";
 import { AnimatePresence } from "framer-motion";
 import { useDispatch, useSelector } from "react-redux";
+import axios from "axios";
 
 export default function Tools({ navOptions, locale }) {
   const availableLocales = ["uz", "ru"];
@@ -47,6 +48,27 @@ export default function Tools({ navOptions, locale }) {
     setMenu(false); // Закрываем меню
   };
 
+  const statisticsButton = async () => {
+    try {
+      const response = await axios.post(
+        "https://api.interlab-basket-bot.result-me.uz/api/count/add-count",
+        {
+          countType: "BASKET_BUTTON",
+        },
+        {
+          headers: {
+            authKey: "dv54sd5v64sv4sdv4s65v4ds6v4sd6v4sd6v4sd6v98v7ev4sd6",
+          },
+        }
+      );
+      if (response.status === 200) {
+        console.log("success button");
+      }
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
   return (
     <div className="flex gap-5 max-mdx:gap-2 justify-between self-stretch my-auto">
       {/* Анимация для появления SearchBar */}
@@ -55,7 +77,11 @@ export default function Tools({ navOptions, locale }) {
       </AnimatePresence>
 
       <div className="flex items-center gap-4 max-mdx:gap-1 my-auto">
-        <Link href={`/backet`} className=" w-[25px] relative">
+        <Link
+          onClick={statisticsButton}
+          href={`/backet`}
+          className=" w-[25px] relative"
+        >
           {/* <button
             onClick={() => setSearch(true)}
             className='flex items-center gap-4'
